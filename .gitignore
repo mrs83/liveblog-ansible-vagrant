@@ -1,3 +1,10 @@
 ### Vagrant ###
 .vagrant/
 vagrant_ansible_inventory*
+### Ansible ###
+.ansible/
+### Misc ###
+*.swp
+.cache/
+.idea/
+env
