@@ -1,0 +1,3 @@
+[submodule "liveblog"]
+	path = liveblog
+	url = https://github.com/liveblog/liveblog.git
