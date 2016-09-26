@@ -1,0 +1,20 @@
+---
+
+- name: Liveblog development instance
+  hosts: all
+  become: yes
+  vars:
+    user_name: "vagrant"
+
+  roles:
+    - common
+    - redis
+    - mongodb
+    - elasticsearch
+    - python
+    - nodejs
+    - { role: client, autostart: true, enabled: true }
+    - { role: gunicorn, autostart: true, enabled: true }
+    - { role: ws, autostart: true, enabled: true }
+    - { role: celery, autostart: true, enabled: true }
+    - { role: celerybeat, autostart: true, enabled: true }
