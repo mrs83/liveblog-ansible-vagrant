@@ -8,11 +8,11 @@
 
   roles:
     - common
+    - nodejs
+    - python
     - redis
     - mongodb
     - elasticsearch
-    - python
-    - nodejs
     - { role: client, autostart: true, enabled: true }
     - { role: gunicorn, autostart: true, enabled: true }
     - { role: ws, autostart: true, enabled: true }

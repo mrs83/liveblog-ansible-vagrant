@@ -6,7 +6,7 @@ VAGRANT_IP = "192.168.33.11"
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.ssh.insert_key = false
-  config.vm.synced_folder ".", "/home/vagrant",
+  config.vm.synced_folder ".", "/opt/ansible",
     :nfs => true,
     :mount_options => ['actimeo=2']
   config.vm.synced_folder "liveblog", "/opt/superdesk",
@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.install = true
-    ansible.provisioning_path = "/home/vagrant"
+    ansible.provisioning_path = "/opt/ansible"
     ansible.playbook = "liveblog-dev.yml"
   end
 

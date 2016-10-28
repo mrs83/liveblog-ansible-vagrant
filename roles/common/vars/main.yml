@@ -1,10 +1,13 @@
 ---
 
+# provisioning path
+provisioning_path: "/opt/ansible"
+
 # project name
-project_name: liveblog
+project_name: "liveblog"
 
 # home path
-home_path: /home/{{ user_name }}
+home_path: "/home/{{ user_name }}"
 
 # project path
 project_path: "/opt/superdesk"

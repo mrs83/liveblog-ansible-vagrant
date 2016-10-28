@@ -17,8 +17,6 @@
     - liblcms2-dev
     - libwebp-dev
     - libfontconfig
-    - nodejs
-    - npm
 
 - name: Install Supervisor
   apt: name={{ item }} state=installed

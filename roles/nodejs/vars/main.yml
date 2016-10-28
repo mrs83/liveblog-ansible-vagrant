@@ -1,3 +1,5 @@
 ---
 
 client_path: "{{ project_path }}/client"
+nodejs_repo_version: "4.x"
+
