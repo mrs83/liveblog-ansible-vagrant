@@ -35,14 +35,16 @@
 - name: Install npm packages for liveblog project
   npm: path={{ client_path }} state=present
 
-# https://github.com/bower/bower/issues/1492
-- name: Run bower install for liveblog project
-  shell: "cd {{ client_path }}; bower install"
-  sudo: no
-  environment:
-    GIT_DIR: "{{ provisioning_path }}"
+- name: Install bower packages for liveblog project
+  bower: path={{ client_path }}
 
-- name: Run grunt build for liveblog project
-  command: grunt build
-  args:
-    chdir: "{{ client_path }}"
+# https://github.com/bower/bower/issues/1492
+# - name: Run bower install for liveblog project
+#   shell: "cd {{ client_path }}; GIT_DIR={{ project_path }} bower install --allow-root"
+#   sudo: no
+
+#- name: Run grunt build for liveblog project
+#  command: grunt build
+#  args:
+#    chdir: "{{ client_path }}"
+

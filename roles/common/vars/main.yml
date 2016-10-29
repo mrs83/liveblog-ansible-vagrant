@@ -17,3 +17,4 @@ application_path: "{{ project_path }}/server"
 
 # client app path
 client_path: "{{ project_path }}/client"
+

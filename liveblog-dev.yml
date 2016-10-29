@@ -18,3 +18,4 @@
     - { role: ws, autostart: true, enabled: true }
     - { role: celery, autostart: true, enabled: true }
     - { role: celerybeat, autostart: true, enabled: true }
+    - devel

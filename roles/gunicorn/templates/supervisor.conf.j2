@@ -1,5 +1,6 @@
 [program:gunicorn]
-command={{ virtualenv_path }}/bin/gunicorn -c {{ application_path }}/gunicorn_config.py wsgi
+;command={{ virtualenv_path }}/bin/gunicorn -c {{ application_path }}/gunicorn_config.py wsgi
+command={{ virtualenv_path }}/bin/python {{ application_path }}/app.py
 directory={{ application_path }}
 environment=PATH="{{ virtualenv_path }}/bin"
 user={{ user_name }}
