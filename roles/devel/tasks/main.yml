@@ -1,0 +1,8 @@
+- name: Initialize application data
+  shell: "{{ virtualenv_path }}/bin/python3 {{ application_path }}/manage.py app:initialize_data"
+  
+- name: Create admin user
+  shell: "{{ virtualenv_path }}/bin/python3 {{ application_path }}/manage.py users:create -u admin -p admin -e 'admin@example.com' --admin"
+  
+- name: Register local themes
+  shell: "{{ virtualenv_path }}/bin/python3 {{ application_path }}/manage.py register_local_themes"
